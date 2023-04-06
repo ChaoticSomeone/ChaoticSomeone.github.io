@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <meta charset="UTF-8">
+    <title>SEW Helper</title>
+</head>
+<body>
+    <a href="../index.html">Zurück zur Startseite</a>
+
+    <p>Hinweis: Code der fett in <span><b>Farbe</b></span> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+
+    <p>Der wesentliche Unterschied zwischen Unterprogrammen und Funktion ist, dass Funktionen einen Wert zurückschicken können und Unterprogramme nicht.
+        Beide werden verwendet, wenn dieselbe Anweisung mehrmals benötigt wird, um die Lesbarkeit zu erhalten.
+        Von weder einer Funktion noch einem Unterprogramm lässt sich auf Variablen zugreifen, die in der Main-Funktion definiert wurden,
+        dafür sind Parameter oder sog. Globale Variablen notwendig (wobei Letzteres nicht empfohlen ist).
+    </p><p>
+        Es ist empfehlenswert komplexere Algorithmen bzw. Abläufe in einzelne Funktionen/Unterprogramme zu gliedern.
+    </p>
+
+    <h2>Unterprogramme</h2>
+    <p>Ein Unterprogramm schickt keine Werte zurück, sondern führt nur eine Reihe von Anweisungen aus. Einem Unterprogramm
+    kann man sog. Parameter angeben. Diese sind Werte, die die Funktion evtl. für ihre Verarbeitung benötigen könnte.
+    </p>
+    <div class="code">
+        <code>
+            void <span>Name</span>(<span>Datentyp Name, ...</span>){<br>
+            <span class="tab1">...</span><br>}
+        </code>
+    </div>
+    <p>Zu beachten ist das void-Schlüsselwort, es gibt an das es sich hierbei um ein Unterprogramm handelt (Obwohl unter speziellen Umständen void auch ein 'Datentyp' ist, dies ist aber nicht relevant).
+    Obwohl Unterprogramme keinen Wert zurückschicken, kann das return-Schlüsselwort genutzt werden, um das Unterprogramm frühzeitig zu beenden, dies erfolgt auf diese Weise:
+    </p>
+    <div class="code">
+        <code>
+            void <span>Unterprogrammname</span>(<span>Datentyp Parametername, ...</span>){<br>
+            <span class="tab1">...</span><br>
+            <span class="tab1"></span>return;<br>}
+        </code>
+    </div>
+
+    <h2>Funktionen</h2>
+    <p>Im Gegensatz zu Unterprogrammen können Funktionen auch einen Wert zurückschicken. Auch Funktionen können Parameter haben.</p>
+    <div class="code">
+        <code>
+            <span>Datentyp Funktionsname</span>(<span>Datentyp Parametername, ...</span>){<br>
+            <span class="tab1">...</span><br>
+            <span class="tab1"></span>return <span>...</span>;<br>}
+        </code>
+    </div>
+</body>
+</html>
