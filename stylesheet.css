@@ -9,6 +9,7 @@
 .code{
     border: 2px solid #BB86FC;
     border-collapse: collapse;
+    width: 50vw;
     background-color: #404040;
     color: #eeeeee;
 }
@@ -29,6 +30,7 @@ span{
 
 
 body {
+    font-size: 1.48vh;
     margin-left: 1vw;
     font-family: Calibri;
     color: #eeeeee;
@@ -46,3 +48,4 @@ a:link{
 a:visited{
     color: #FF0266;
 }
+
