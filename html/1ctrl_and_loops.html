@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <meta charset="UTF-8">
+    <title>SEW Helper</title>
+</head>
+<body>
+    <a href="../index.html">Zurück zur Startseite</a>
+    
+    <p>Hinweis: Code der fett in Farbe (0x03DAC5) geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+    
+    <h2>Verzweigungen</h2>
+    <p>Verzweigungen erlauben es uns, unseren Code nur unter bestimmten Umständen auszuführen. Verzweigungen gibt es in den folgenden Ausführungen:</p>
+    
+    <h3>Einfach Verzweigung</h3>
+    <p>Eine Einfach Verzweigung besteht aus einer einzigen if-Anweisung. Und ist wie folgt aufgebaut:</p>
+    <div class="code">
+    <code>if (<span><b>Bedingung</b></span>){<br><span class="tab1"><b>...</b></span><br>}</code>
+    </div>
+    <p>Die Bedingung wird auf ihren Wahrheitswert geprüft (true/false) und besteht aus mind.
+        2 Werten und 1 logischem Operator (==, !=, <, >, <=, >=, siehe Kapitel 2).
+    </p>
+    <p>Ist die Bedingung wahr, wird der sog. then-Zweig ausgeführt.</p>
+    
+    <h3>Zweifach Verzweigung</h3>
+    <p>Die Zweifach Verzweigung ähnelt der Einfachen, jedoch ist diese durch eine else-Anweisung erweitert: </p>
+    <div class="code">
+    <code>if (<span><b>Bedingung</b></span>){<br><span class="tab1"><b>...</b></span><br>}<br>else{<br><span class="tab1"><b>...</b></span><br>}</code>
+    </div>
+    <p>Ist die Bedingung wahr wird wie gewohnt der then-Zweig ausgeführt, sollte nun die Bedingung aber falsch sein, so wird der else-Zweig ausgeführt.</p>
+    
+    <h3>Mehrfach Verzweigung - If</h3>
+    <p>Ein If-Else Gerüst lässt sich nun weiter in ein If-Else If-Else Gerüst erweitern, aus diese Weise lassen beliebig viele Bedingungen prüfen.
+        Die minimalistische Schreibweise wäre:
+    </p>
+    <div class="code">
+        <code>
+            if (<span><b>Bedingung 1</b></span>)
+            {<br><span class="tab1"><b>...</b></span><br>}
+            <br>else if (<span><b>Bedingung 2</b></span>)
+            {<br><span class="tab1"><b>...</b></span><br>}
+            <br>else{<br><span class="tab1"><b>...</b></span><br>}
+        </code>
+    </div>
+    <p>Hierbei ist zu beachten, dass die Bedingungen von oben nach unten geprüft werden, nur einer der Zweige kann ausgeführt werden.
+         Sobald eine Bedingung wahr ist, werden die weiteren Bedingungen nicht mehr überprüft.
+    </p>
+    
+    <h3>Mehrfach Verzweigung - Switch</h3>
+    <p>Die Switch-Verzweigung kann, im Gegensatz zur If-Verzweigung, nur die Übereinstimmung numerischer Werte überprüfen.
+        D. h. die Logischen Operatoren kommen hier nicht zum Einsatz.
+        Die Switch-Verzweigung wird zudem von vielen Menschen lesbarer empfunden als ein If-Else If-Else Gerüst:
+    </p>
+    <div class="code">
+        <code>
+            switch(<span><b>Variable</b></span>)
+            {<br><span class="tab1"></span>
+            <span class="tab1"></span>case <span><b>zahl 1</b></span>:
+            <br><span class="tab2">...</span><br><span class="tab2"></span>break;
+            <br><span class="tab1"></span>case <span>zahl 2</span>:
+            <br><span class="tab2">...</span><br><span class="tab2"></span>break;
+            <br><span class="tab1"></span>default:<br><span class="tab2">...</span>
+            <br>}
+        </code>
+    </div>
+    <p>Zu beachten sind sie break-Anweisungen in den case-Zweigen, diese sorgen dafür, dass nach der Ausführung des case-Zweigs kein weiterer Zweig ausgeführt wird.
+        Die break-Anweisung ist im default-Zweig nicht notwendig.
+    </p>
+    <p>Die case-Anweisungen sind Vergleichbar zu den if und if else-Anweisungenen, während die default-Anweisung mit der else-Anweisung übereinstimmt.</p>
+    
+    
+    <h2>Schleifen</h2>
+    <p>Mittels Schleifen lässt sich ein Code-Block wiederholt ausführen, jede der 3 Schleifen verhält sich etwas unterschiedlich:</p>
+    
+    <h3>while-Schleife</h3>
+    <p>Die while-Schleife erlaubt es uns, unseren Code solange wiederholt auszuführen, solange die angegebene Bedigung erfüllt (true) ist.
+        Die Bedingung wird vor der Ausführung des Code-Blocks überprüft. Aufgrund dieser Eigenschaft kann der Code 0 bis unendlich oft ausgeführt werden
+    </p>
+    <div class="code">
+        <code>
+            while (<span>Bedingungen</span>)
+            {<br><span class="tab1">...</span><br>}
+        </code>
+    </div>
+    
+    <h3>do while-Schleife</h3>
+    <p>Obwohl die Funktionalität dieser Schleife der while-Schleife ähnelt, ist der Aufbau einer do while-Schleife deutlich anders, wie sich folglich erkennen lässt.
+        Die Bedingung wird erst nach der Ausführung des Code-Blocks überprüft. Eine do while-Schleife wird immer 1 bis unendlich-mal ausgeführt.</p>
+    <div class="code">
+        <code>
+            do{<br><span class="tab1">...</span><br>}
+            while (<span>Bedingung</span>);
+        </code>
+    </div>
+    
+    <h3>for-Schleife</h3>
+    <p>Der Aufbau einer for-Schleife unterscheidet sich deutlich vom Aufbau der anderen beiden Schleifen.
+        for-Schleifen werden bei Zählabläufen verwendet oder wenn die Anzahl der Wiederholungen im Vorhinein bekannt ist:</p>
+    <div class="code">
+        <code>
+            for(<span>Initialisierung</span>; <span>Bedingung</span>; <span>Aktualisierung</span>)
+            {<br><span class="tab1">...</span><br>}
+        </code>
+    </div>
+    <p>Bei der Initialisierung wird die sog. Laufvariable auf einen Startwert gesetzt, wie bei den vorherigen beiden Schleifen muss erneut die Bedingung erfüllt sein.
+        Bei der Aktualisierung wird der Wert der Laufvariable geändert. Somit kann eine for-Schleife, genau so wie eine while-Schleife, 0-unendlich oft ausgeführt werden.
+        FunFact: Nur die Bedingung wird benötigt
+    </p><p>
+        Initialisierung und Aktualisierung sind optional (ist aber nicht empfehlenswert).
+    </p>
+    
+    
+</body>
+</html>

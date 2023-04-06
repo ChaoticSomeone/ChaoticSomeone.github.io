@@ -1,24 +1,44 @@
 
 
 #credits{
-    margin-top:100px;
+    position: absolute;
+    bottom: 0;
     font-size: 10px;
 }
 
 .code{
-    background-color: #4a4a4a;
+    background-color: #363636;
     color: #eeeeee;
 }
 
 
 span{
-    color: #46a950;
+    color: #03DAC5;
 }
 
-#tab1{
+.tab1{
     margin-left: 20px;
 }
 
-#tab2{
+.tab2{
     margin-left: 40px;
+}
+
+
+body {
+    font-family: Calibri;
+    color: #eeeeee;
+    background-color: #242424
+}
+
+h1, h2, h3{
+    color: #BB86FC
+}
+
+a:link{
+   color: #FF7597
+}
+
+a:visited{
+    color: #FF0266
 }
