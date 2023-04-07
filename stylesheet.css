@@ -3,12 +3,12 @@
 #credits{
     position: absolute;
     bottom: 0;
-    font-size: 10px;
+    font-size: 0.925vh;
 }
 
 .code{
     font-size: 1.48vh;
-    border: 2px solid #BB86FC;
+    border: 0.185vh solid #BB86FC;
     border-collapse: collapse;
     width: 50vw;
     background-color: #404040;
@@ -30,11 +30,11 @@ span.highlight{
 }
 
 .tab1{
-    margin-left: 20px;
+    margin-left: 1.85vh;
 }
 
 .tab2{
-    margin-left: 40px;
+    margin-left: 3.704vh;
 }
 
 
@@ -57,5 +57,9 @@ a:link{
 
 a:visited{
     color: #FF0266;
+}
+
+ul, ol {
+    padding-left: 3.703vh;
 }
 
