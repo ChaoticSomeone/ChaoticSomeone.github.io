@@ -7,17 +7,26 @@
 }
 
 .code{
+    font-size: 1.48vh;
     border: 2px solid #BB86FC;
     border-collapse: collapse;
     width: 50vw;
     background-color: #404040;
     color: #eeeeee;
 }
+code{
+    font-size: 1.48vh;
+}
 
 
 span{
-    font-family: monospace;
+    font-family: Monospace;
     color: #03DAC5;
+}
+
+span.highlight{
+    font-family: Calibri;
+    color: #FF0022;
 }
 
 .tab1{
@@ -32,6 +41,7 @@ span{
 body {
     font-size: 1.48vh;
     margin-left: 1vw;
+    margin-right: 20vw;
     font-family: Calibri;
     color: #eeeeee;
     background-color: #242424;
