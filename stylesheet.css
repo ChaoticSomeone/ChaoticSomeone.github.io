@@ -1,27 +1,31 @@
-
-
 #credits{
     position: absolute;
     bottom: 0;
     font-size: 1vh;
 }
 
-.code{
+div.code{
     font-size: 1.48vh;
     border: 0.185vh solid #BB86FC;
     border-collapse: collapse;
-    width: 50vw;
+    width: 90vw;
+    padding: 0;
     background-color: #404040;
     color: #eeeeee;
 }
+
 code{
     font-size: 1.48vh;
 }
 
-
-span{
+span.nonLiteral{
     font-family: Monospace;
     color: #03DAC5;
+}
+
+span.comment{
+    font-family: Monospace;
+    color: #6a9955
 }
 
 span.highlight{
@@ -36,7 +40,6 @@ span.highlight{
 .tab2{
     margin-left: 3.704vh;
 }
-
 
 body {
     font-size: 1.48vh;
@@ -62,4 +65,3 @@ a:visited{
 ul, ol {
     padding-left: 3.703vh;
 }
-

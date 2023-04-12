@@ -25,8 +25,8 @@
     </p>
     <div class="code">
         <code>
-            void <span>Name</span>(<span>Datentyp Name, ...</span>){<br>
-            <span class="tab1">...</span><br>}
+            void <span class="nonLiteral">Unterprogrammname</span>(<span class="nonLiteral">Datentyp Parametername, ...</span>){<br>
+            <span class="tab1 nonLiteral">...</span><br>}
         </code>
     </div>
     <p>Zu beachten ist das void-Schlüsselwort, es gibt an das es sich hierbei um ein Unterprogramm handelt (Obwohl unter speziellen Umständen void auch ein 'Datentyp' ist, dies ist aber nicht relevant).
@@ -34,8 +34,8 @@
     </p>
     <div class="code">
         <code>
-            void <span>Unterprogrammname</span>(<span>Datentyp Parametername, ...</span>){<br>
-            <span class="tab1">...</span><br>
+            void <span class="nonLiteral">Unterprogrammname</span>(<span class="nonLiteral">Datentyp Parametername, ...</span>){<br>
+            <span class="tab1 nonLiteral">...</span><br>
             <span class="tab1"></span>return;<br>}
         </code>
     </div>
@@ -44,9 +44,9 @@
     <p>Im Gegensatz zu Unterprogrammen können Funktionen auch einen Wert zurückschicken. Auch Funktionen können Parameter haben.</p>
     <div class="code">
         <code>
-            <span>Datentyp Funktionsname</span>(<span>Datentyp Parametername, ...</span>){<br>
-            <span class="tab1">...</span><br>
-            <span class="tab1"></span>return <span>...</span>;<br>}
+            <span class="nonLiteral">Datentyp Funktionsname</span>(<span class="nonLiteral">Datentyp Parametername, ...</span>){<br>
+            <span class="tab1 nonLiteral">...</span><br>
+            <span class="tab1"></span>return <span class="nonLiteral">...</span>;<br>}
         </code>
     </div>
 
@@ -54,6 +54,36 @@
     <p>Eine Header-Datei (.h, nicht .hpp) wird verwendet um Funktionen bzw. Unterprogramme aus einer anderen C-Datei einzubinden.
         Bei Modulen erfolgt die Definition der Funktion/des Unterprogramms in einer seperaten C-Datei, während der Funktionsprototyp
         sich in der Header-Datei befindet. Geht man nicht von einem Modul aus, kann man auch die Definition selbst im Header verfassen.
+        Der Aufbau lässt sich anhand folgendem Beispiel erkennen:
     </p>
+    <p>Code in 'mymodule.h':</p>
+    <div class="code">
+        <code>
+            #ifndef MYMODULE_H<br>
+            #define MYMODULE_H<br>
+            void func();<br>
+            #endif
+        </code>
+    </div>
+    <p>Code in 'mymodule.c':</p>
+    <div class="code">
+        <code>
+            #include &ltstdio.h&gt<br>
+            #include "mymodule.h"<br>
+            void func(){<br>
+            <span class="tab1">printf("Hello World\n");</span><br>
+            }<br>
+        </code>
+    </div>
+    <p>Code in 'main.c':</p>
+    <div class="code">
+        <code>
+            #include "mymodule.h"<br>
+            int main(){<br>
+            <span class="tab1">func();</span><br>
+            }<br>
+            return 0;
+        </code>
+    </div>
 </body>
 </html>

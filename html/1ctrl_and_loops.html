@@ -16,7 +16,11 @@
     <h3>Einfach Verzweigung</h3>
     <p>Eine Einfach Verzweigung besteht aus einer einzigen if-Anweisung. Und ist wie folgt aufgebaut:</p>
     <div class="code">
-    <code>if (<span><b>Bedingung</b></span>){<br><span class="tab1"><b>...</b></span><br>}</code>
+        <code>
+            if (<span class="nonLiteral"><b>Bedingung</b></span>)
+            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>
+            }
+        </code>
     </div>
     <p>Die Bedingung wird auf ihren Wahrheitswert geprüft (true/false) und besteht aus mind.
         2 Werten und 1 logischem Operator (==, !=, <, >, <=, >=, siehe Kapitel 2).
@@ -26,7 +30,11 @@
     <h3>Zweifach Verzweigung</h3>
     <p>Die Zweifach Verzweigung ähnelt der Einfachen, jedoch ist diese durch eine else-Anweisung erweitert: </p>
     <div class="code">
-    <code>if (<span><b>Bedingung</b></span>){<br><span class="tab1"><b>...</b></span><br>}<br>else{<br><span class="tab1"><b>...</b></span><br>}</code>
+        <code>
+            if (<span class="nonLiteral"><b>Bedingung</b></span>)
+            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+            <br>else{<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+        </code>
     </div>
     <p>Ist die Bedingung wahr wird wie gewohnt der then-Zweig ausgeführt, sollte nun die Bedingung aber falsch sein, so wird der else-Zweig ausgeführt.</p>
     
@@ -36,11 +44,11 @@
     </p>
     <div class="code">
         <code>
-            if (<span><b>Bedingung 1</b></span>)
-            {<br><span class="tab1"><b>...</b></span><br>}
-            <br>else if (<span><b>Bedingung 2</b></span>)
-            {<br><span class="tab1"><b>...</b></span><br>}
-            <br>else{<br><span class="tab1"><b>...</b></span><br>}
+            if (<span class="nonLiteral"><b>Bedingung 1</b></span>)
+            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+            <br>else if (<span class="nonLiteral"><b>Bedingung 2</b></span>)
+            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+            <br>else{<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
         </code>
     </div>
     <p>Hierbei ist zu beachten, dass die Bedingungen von oben nach unten geprüft werden, nur einer der Zweige kann ausgeführt werden.
@@ -55,12 +63,12 @@
     <div class="code">
         <code>
             switch(<span><b>Variable</b></span>)
-            {<br><span class="tab1"></span>
-            <span class="tab1"></span>case <span><b>zahl 1</b></span>:
-            <br><span class="tab2">...</span><br><span class="tab2"></span>break;
-            <br><span class="tab1"></span>case <span>zahl 2</span>:
-            <br><span class="tab2">...</span><br><span class="tab2"></span>break;
-            <br><span class="tab1"></span>default:<br><span class="tab2">...</span>
+            {<br>
+            <span class="tab1"></span>case <span class="nonLiteral"><b>zahl 1</b></span>:
+            <br><span class="tab2 nonLiteral">...</span><br><span class="tab2"></span>break;
+            <br><span class="tab1"></span>case <span class="nonLiteral">zahl 2</span>:
+            <br><span class="tab2 nonLiteral">...</span><br><span class="tab2"></span>break;
+            <br><span class="tab1"></span>default:<br><span class="tab2 nonLiteral">...</span>
             <br>}
         </code>
     </div>
@@ -74,13 +82,13 @@
     <p>Mittels Schleifen lässt sich ein Code-Block wiederholt ausführen, jede der 3 Schleifen verhält sich etwas unterschiedlich:</p>
     
     <h3>while-Schleife</h3>
-    <p>Die while-Schleife erlaubt es uns, unseren Code solange wiederholt auszuführen, solange die angegebene Bedigung erfüllt (true) ist.
+    <p>Die while-Schleife erlaubt es uns, unseren Code so lange wiederholt auszuführen, solange die angegebene Bedigung erfüllt (true) ist.
         Die Bedingung wird vor der Ausführung des Code-Blocks überprüft. Aufgrund dieser Eigenschaft kann der Code 0 bis unendlich oft ausgeführt werden
     </p>
     <div class="code">
         <code>
-            while (<span>Bedingungen</span>)
-            {<br><span class="tab1">...</span><br>}
+            while (<span class="nonLiteral">Bedingungen</span>)
+            {<br><span class="tab1 nonLiteral">...</span><br>}
         </code>
     </div>
     
@@ -89,8 +97,8 @@
         Die Bedingung wird erst nach der Ausführung des Code-Blocks überprüft. Eine do while-Schleife wird immer 1 bis unendlich-mal ausgeführt.</p>
     <div class="code">
         <code>
-            do{<br><span class="tab1">...</span><br>}
-            while (<span>Bedingung</span>);
+            do{<br><span class="tab1 nonLiteral">...</span><br>}
+            while (<span class="nonLiteral">Bedingung</span>);
         </code>
     </div>
     
@@ -99,7 +107,7 @@
         for-Schleifen werden bei Zählabläufen verwendet oder wenn die Anzahl der Wiederholungen im Vorhinein bekannt ist:</p>
     <div class="code">
         <code>
-            for(<span>Initialisierung</span>; <span>Bedingung</span>; <span>Aktualisierung</span>)
+            for(<span class="nonLiteral">Initialisierung</span>; <span class="nonLiteral">Bedingung</span>; <span class="nonLiteral">Aktualisierung</span>)
             {<br><span class="tab1">...</span><br>}
         </code>
     </div>
@@ -112,9 +120,9 @@
 
 
     <h3>Sonstiges</h3>
-    <p>Im Bezug auf Schleifen gibt es ein weiteres relevante Schlüsselwort:</p>
+    <p>Im Bezug auf Schleifen gibt es ein weiteres relevantes Schlüsselwort:</p>
     <ul>
-        <li>break<br><span class="tab1"></span>Führt zum sofortigen Beenden einer Schleife.</li>
+        <li>break:<br><span class="tab1"></span>Führt zum sofortigen Beenden einer Schleife.</li>
     </ul>
 
     
