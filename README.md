@@ -7,3 +7,4 @@ Beschwerden über den Source Code sind nicht erwünscht!
 - Verzweigungen
 - Schleifen
 - Operatoren
+- Funktionen & Unterprogramme
