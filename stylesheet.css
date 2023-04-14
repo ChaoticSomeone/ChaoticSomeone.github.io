@@ -15,7 +15,7 @@ div.code{
 }
 
 code{
-    font-size: 1.48vh;
+    font-size: 23px;
 }
 
 span.nonLiteral{
@@ -52,10 +52,12 @@ body {
 
 h1, h2, h3{
     color: #BB86FC;
+    font-size: 35px;
 }
 
 a:link{
    color: #FF7597;
+   font-size: 20px;
 }
 
 a:visited{
@@ -64,4 +66,10 @@ a:visited{
 
 ul, ol {
     padding-left: 3.703vh;
+}
+p {
+    font-size: 22px;
+}
+#creds {
+    font-size: 10px;
 }

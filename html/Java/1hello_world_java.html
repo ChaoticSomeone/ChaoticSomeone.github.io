@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEW Helper</title>
+    <link rel="stylesheet" href="../../stylesheet.css">
+</head>
+<body>
+    <a href="../../index.html">Zurück zur Startseite</a>
+    <p>Hinweis: Code der fett in <b style="font-family: Monospace; color: #03DAC5">Farbe</b> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+    <h2>Grundstruktur</h2>
+    <div class="code">
+        <code>
+            public class Main { <br>
+                <span class="tab2">public static void main(String[] args) {<br></span>
+                    <span class="tab2">System.out.println("Hello, World!");<br></span>
+                    <span class="tab2">}<br></span>
+            }
+        </code>
+    </div>
+    <p>Die Grundstruktur eines Java Projektes kann man grundsätzlich in 3 Teile gliedern.<br>
+        Um den Code leichter verständlich zu machen, brechen wir den Code auf die Einzelteile herunter.
+        <div class="code">
+            <code>
+                public class Main {<span class="nonLiteral"><b>...</b></span>}<br>
+            </code>
+        </div>
+    </p>
+    <p>
+        Diese Zeile besagt im Grunde das eine neue Klasse definiert wird.
+        Eine Klasse ist im Grunde genommen eine Funktion, nur das man einer Klasse keine Parameter geben kann. Auch kann man in einer Klasse Daten von dem Rest des Codes abkapseln (siehe Kapitel Klassen).<br>
+        Das KeyWord "public" wird dazu verwendet, dass man auf diese Klasse außerhalb der Datei, in der die Klasse definiert wurde, zugreifen kann. Auch kann man das Keyword "private" verwenden um die Funktion außerhalb der Datei
+        als nicht zugreifbar zu markieren.<br>
+        Also ein leeres Gerüst würde so aussehen:
+        <div class="code">
+            <code>
+                public class <span class="nonLiteral"><b>Name</b></span> {<span class="nonLiteral"><b>...</b></span>}<br>
+            </code>
+        </div>
+    </p>
+    <p>
+        Um nun zum Zweiten Part des Hello World Programmes zu kommen, müssen wir uns den Funktionen in Java widmen.
+        <div class="code">
+            <code>
+                    public static void main(String[] args) {<span class="nonLiteral"><b>...</b></span>}<br>
+            </code>
+        </div>
+    </p>
+    <p>
+        Hier wird wieder wie in der Klasse entweder das Keyword "public" oder "private" verwendet. Jedoch werden hier Zwei weitere neue Keywords hinzugefügt.<br>
+        Zum einen gibt es das Keyword "static", welches für einen Zugriff auf die Funktion ermöglicht, ohne sich mit umständlichen Strukturen herumschlagen zu müssen.<br>
+        Auch wird ein Datentyp in der Funktion angegeben. Hier wird nichts neues verwendet, was wir nicht schon aus der Programmiersprache C können. Das Keyword "void" steht einfach nur dafür,
+        das nichts zurückgegeben wird.<br>
+        Um nun ein "Hello World" in Java ausgeben zu können, brauchen wir bestimmte Parameter in der Main Funktion. Diese Parameter bestehen aus einem String-Array (siehe Kapitel Arrays) und einem
+        Platzhalter für Argumente (siehe Kapitel Funktionen). Diese werden gebraucht um einen String, eine Aneinanderreihung von Zeichen, ausgeben zu können.<br><br>
+        Eine Funktion besteht in Java aus der Öffentlichkeit der Funktion (public oder private), ob die Funktion static ist oder nicht, einem Datentypen, einem Namen und Parametern.
+    </p>
+    <p>
+        <div class="code">
+            <code>
+                public static <span class="nonLiteral"><b>Datentyp</b></span> <span class="nonLiteral"><b>Name</b></span>(<span class="nonLiteral"><b>Parameter</b></span>) {<span class="nonLiteral"><b>...</b></span>}
+            </code>
+        </div>
+    </p>
+    <p>
+        Um nun einen Text ausgeben zu können, muss man einen bestimmten Befehl ausführen:
+        <div class="code">
+            <code>
+                System.out.println("Hello, World!");
+            </code>
+        </div>
+    </p>
+    <p>
+        Um nun zu verstehen wie dieser Seltsame und lange Befehl zustande kommt, muss man wissen wie man in Java Funktionen aufruft.<br>
+        In Java ruft man Funktion auf indem man zuerst den Namen der Library vor gibt. In diesem Fall währe das "System". <br>
+        Danach muss man die Klasse angeben, in der die Funktion "println" liegt angeben. Hier währe das "out". <br>
+        Nun muss man nur noch die Funktion angeben. In diesem Fall währe das "println", welches Kurz für "print line" steht. Bestimmte IDE's haben auch Shortcuts dafür.
+        IntelliJ (die IDE von Jetbrains für Java) verwendet den Shortcut "sout".
+    </p>
+</body>
+</html>
