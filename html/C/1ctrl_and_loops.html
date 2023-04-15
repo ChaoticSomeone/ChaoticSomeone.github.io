@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href="../../stylesheet.css" />
+    <link rel="stylesheet" href="../stylesheet.css" />
     <meta charset="UTF-8">
     <title>SEW Helper</title>
 </head>
 <body>
-    <a href="../../index.html">Zurück zur Startseite</a>
+    <a href="../index.html">Zurück zur Startseite</a>
     
-    <p>Hinweis: Code der fett in <b style="font-family: Monospace; color: #03DAC5">Farbe</b> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+    <p>Hinweis: Code der in <b style="font-family: Monospace; color: #03DAC5">Farbe</b> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
     
     <h2>Verzweigungen</h2>
     <p>Verzweigungen erlauben es uns, unseren Code nur unter bestimmten Umständen auszuführen. Verzweigungen gibt es in den folgenden Ausführungen:</p>
@@ -17,8 +17,8 @@
     <p>Eine Einfach Verzweigung besteht aus einer einzigen if-Anweisung. Und ist wie folgt aufgebaut:</p>
     <div class="code">
         <code>
-            if (<span class="nonLiteral"><b>Bedingung</b></span>)
-            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>
+            <key-word>if</key-word> (<non-literal>Bedingung</non-literal>){<br>
+            <non-literal class="tab1">...</non-literal><br>
             }
         </code>
     </div>
@@ -31,9 +31,12 @@
     <p>Die Zweifach Verzweigung ähnelt der Einfachen, jedoch ist diese durch eine else-Anweisung erweitert: </p>
     <div class="code">
         <code>
-            if (<span class="nonLiteral"><b>Bedingung</b></span>)
-            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
-            <br>else{<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+            <key-word>if</key-word> (<non-literal>Bedingung</non-literal>){<br>
+            <non-literal class="tab1">...</non-literal>
+            <br>}<br>
+            <key-word>else</key-word>{<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }
         </code>
     </div>
     <p>Ist die Bedingung wahr wird wie gewohnt der then-Zweig ausgeführt, sollte nun die Bedingung aber falsch sein, so wird der else-Zweig ausgeführt.</p>
@@ -44,11 +47,15 @@
     </p>
     <div class="code">
         <code>
-            if (<span class="nonLiteral"><b>Bedingung 1</b></span>)
-            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
-            <br>else if (<span class="nonLiteral"><b>Bedingung 2</b></span>)
-            {<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
-            <br>else{<br><span class="tab1 nonLiteral"><b>...</b></span><br>}
+            <key-word>if</key-word> (<non-literal>Bedingung 1</non-literal>){<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }<br>
+            <key-word>else if</key-word> (<non-literal>Bedingung 2</non-literal>){<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }<br>
+            <key-word>else</key-word>{<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }
         </code>
     </div>
     <p>Hierbei ist zu beachten, dass die Bedingungen von oben nach unten geprüft werden, nur einer der Zweige kann ausgeführt werden.
@@ -62,14 +69,16 @@
     </p>
     <div class="code">
         <code>
-            switch(<span class="nonLiteral"><b>Variable</b></span>)
-            {<br>
-            <span class="tab1"></span>case <span class="nonLiteral"><b>zahl 1</b></span>:
-            <br><span class="tab2 nonLiteral">...</span><br><span class="tab2"></span>break;
-            <br><span class="tab1"></span>case <span class="nonLiteral">zahl 2</span>:
-            <br><span class="tab2 nonLiteral">...</span><br><span class="tab2"></span>break;
-            <br><span class="tab1"></span>default:<br><span class="tab2 nonLiteral">...</span>
-            <br>}
+            <key-word>switch</key-word>(<non-literal>Variable</non-literal>) {<br>
+            <key-word class="tab1">case</key-word> <non-literal>Zahl 1</non-literal>:<br>
+            <non-literal class="tab2">...</non-literal><br>
+            <key-word class="tab2">break</key-word>;<br>
+            <key-word class="tab1">case</key-word> <non-literal>Zahl 2</non-literal>:<br>
+            <non-literal class="tab2">...</non-literal><br>
+            <key-word class="tab2">break</key-word>;<br>
+            <key-word class="tab1">default</key-word>:<br>
+            <non-literal class="tab2">...</non-literal><br>
+            }
         </code>
     </div>
     <p>Zu beachten sind sie break-Anweisungen in den case-Zweigen, diese sorgen dafür, dass nach der Ausführung des case-Zweigs kein weiterer Zweig ausgeführt wird.
@@ -87,8 +96,9 @@
     </p>
     <div class="code">
         <code>
-            while (<span class="nonLiteral">Bedingungen</span>)
-            {<br><span class="tab1 nonLiteral">...</span><br>}
+            <key-word>while</key-word> (<non-literal>Bedingung</non-literal>) {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }
         </code>
     </div>
     
@@ -97,8 +107,9 @@
         Die Bedingung wird erst nach der Ausführung des Code-Blocks überprüft. Eine do while-Schleife wird immer 1 bis unendlich-mal ausgeführt.</p>
     <div class="code">
         <code>
-            do{<br><span class="tab1 nonLiteral">...</span><br>}
-            while (<span class="nonLiteral">Bedingung</span>);
+            <key-word>do</key-word> {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            } <key-word>while</key-word> (<non-literal>Bedingung</non-literal>);
         </code>
     </div>
     
@@ -107,8 +118,9 @@
         for-Schleifen werden bei Zählabläufen verwendet oder wenn die Anzahl der Wiederholungen im Vorhinein bekannt ist:</p>
     <div class="code">
         <code>
-            for(<span class="nonLiteral">Initialisierung</span>; <span class="nonLiteral">Bedingung</span>; <span class="nonLiteral">Aktualisierung</span>)
-            {<br><span class="tab1">...</span><br>}
+            <key-word>for</key-word> (<non-literal>Initialisierung</non-literal>; <non-literal>Bedingung</non-literal>; <non-literal>Aktualisierung</non-literal>) {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }
         </code>
     </div>
     <p>Bei der Initialisierung wird die sog. Laufvariable auf einen Startwert gesetzt, wie bei den vorherigen beiden Schleifen muss erneut die Bedingung erfüllt sein.
