@@ -5,7 +5,7 @@
 }
 
 div.code{
-    font-size: 1.48vh;
+    font-size: 2vh;
     border: 0.185vh solid #BB86FC;
     border-collapse: collapse;
     width: 90vw;
@@ -15,17 +15,7 @@ div.code{
 }
 
 code{
-    font-size: 23px;
-}
-
-span.nonLiteral{
-    font-family: Monospace;
-    color: #03DAC5;
-}
-
-span.comment{
-    font-family: Monospace;
-    color: #6a9955
+    font-size: 2vh;
 }
 
 span.highlight{
@@ -42,7 +32,7 @@ span.highlight{
 }
 
 body {
-    font-size: 1.48vh;
+    font-size: 2vh;
     margin-left: 1vw;
     margin-right: 20vw;
     font-family: Calibri;
@@ -52,12 +42,18 @@ body {
 
 h1, h2, h3{
     color: #BB86FC;
-    font-size: 35px;
+}
+
+h1{
+    font-size: 3vh;
+}
+
+h2, h3{
+    font-size: 2.5vh;
 }
 
 a:link{
-   color: #FF7597;
-   font-size: 20px;
+    color: #FF7597;
 }
 
 a:visited{
@@ -67,9 +63,38 @@ a:visited{
 ul, ol {
     padding-left: 3.703vh;
 }
-p {
-    font-size: 22px;
+
+new-numeric{
+    font-family: Monospace monospace;
+    color: #6897bb;
 }
-#creds {
-    font-size: 10px;
+
+new-comment{
+    font-family: Monospace monospace;
+    color: #629755;
+}
+
+non-literal{
+    font-family: Monospace monospace;
+    color: #03DAC5;
+}
+
+key-word{
+    font-family: Monospace monospace;
+    color: #cc7832;
+}
+
+pre-processor{
+    font-family: Monospace monospace;
+    color: #bbb529;
+}
+
+new-macro{
+    font-family: Monospace monospace;
+    color: #908b25;
+}
+
+new-string{
+    font-family: Monospace monospace;
+    color: #6a8759;
 }
