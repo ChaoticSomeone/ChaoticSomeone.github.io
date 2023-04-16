@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../stylesheet.css" />
+	<title>SEW Helper</title>
+</head>
+<body>
+    <a href="../../index.html">Zurück zur Startseite</a>
+
+    <p>Hinweis: Code der in <b style="font-family: Monospace; color: #03DAC5">Farbe</b> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+
+	<h2>Pointer</h2>
+
+	<h3>Was ist ein Pointer?</h3>
+	<p>Pointer sind eine spezielle Art von Variable, die besonderen Eigenschaften von Pointer sind:</p>
+	<ul>
+		<li>Unabhängig vom Datentyp brauchen Pointer immer 8 Byte bzw. 64 Bits</li>
+		<li>Pointer können den 'Datentyp' void annehmen</li>
+		<li>Pointer speichern keinen Wert, sondern eine Speicheradresse von z.B. einer Variable</li>
+	</ul>
+
+	<h3>Pointer definieren</h3>
+	<p>Ein Pointer, der die Adresse einer Variable enthält, wird auf folgende Weise definiert:</p>
+	<div class="code">
+		<code>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal>; <new-comment>// Nicht empfohlen</new-comment><br>
+			<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>; <new-comment>// Zuweisung einer Adresse</new-comment>
+		</code>
+	</div>
+	<p>In diesem Zusammenhang ist '&' nicht der Bitweise UND Operator, sondern erlaubt uns die Adresse einer Variable zu erhalten.
+		Wie man erkennen kann, ist die erste Zeile des vorherigen Codes nicht empfohlen, der Grund dafür: Im obigen Beispiel ist der Pointer uninitialisiert,
+	 deshalb wählt der Compiler eine, mehr oder weniger, zufällige Adresse die der Pointer speichert. Das folgende Beispiel gibt 2 Wege an die empfohlen sind:</p>
+	<div class="code">
+		<code>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>; <new-comment>// bessere Lösung</new-comment><br>
+			<br>
+			<new-comment>// Empfohlene Lösung</new-comment><br>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = <new-macro>NULL</new-macro>; <new-comment>// Setzt die Adresse auf HEX 0x0</new-comment><br>
+			<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>; <new-comment>// Zuweisung einer Adresse</new-comment>
+		</code>
+	</div>
+	<p>Diese 2 Wege, um einen Pointer zu initialisieren, sind die einzigen beiden (simplen) Schreibweisen die verwendet werden sollten. Eine weitere Schreibweise wird zu einem späteren Zeitpunkt erklärt.
+	 Aber wer wirklich eine Vorliebe für Segmentation Faults (Speicherverletzungen, Exit Code: 0xC0000005) hat, kann Pointer manuell mit Adressen initialiseiren:
+	</p>
+	<div class="code">
+		<code>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = (<non-literal>Datentyp</non-literal> *) <non-literal>Adresse</non-literal>;
+		</code>
+	</div>
+
+	<h2>Wert an der enthaltenen Adresse ändern</h2>
+	<p>Pointer sind in der Lage den Wert an der Adresse, die sie enthalten, zu ändern. Dies erfolgt auf folgende Weise:</p>
+	<div class="code">
+		<code>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>;<br>
+			*<non-literal>Pointername</non-literal> = <non-literal>Wert</non-literal>;
+		</code>
+	</div>
+
+	<h2>Adresse eines Pointers ändern</h2>
+	<p>Pointer können auch die Adresse ändern auf die sie zu greifen:</p>
+	<div class="code">
+		<code>
+			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>;<br>
+			<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>;
+		</code>
+	</div>
+
+	<h2>Beispiele #1</h2>
+	<p></p>
+
+</body>
+</html>
