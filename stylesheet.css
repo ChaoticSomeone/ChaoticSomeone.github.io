@@ -17,11 +17,6 @@ code{
     font-size: 2vh;
 }
 
-span.highlight{
-    font-family: Calibri;
-    color: #FF0022;
-}
-
 .tab1{
     margin-left: 1.85vh;
 }
@@ -39,16 +34,46 @@ body {
     background-color: #242424;
 }
 
-h1, h2, h3{
-    color: #BB86FC;
-}
-
 h1{
     font-size: 3vh;
 }
 
 h2, h3{
     font-size: 2.5vh;
+}
+
+ul, ol {
+    padding-left: 3.703vh;
+}
+
+input.slot{
+    min-height: 2vh;
+    font-size: 2vh;
+    color: #eeeeee;
+    background-color: #404040;
+    border: #03DAC5 solid 2px;
+}
+
+input.check{
+    min-height: 2vh;
+    font-size: 2vh;
+    color: #eeeeee;
+    margin-left: 0.5vw;
+    margin-bottom: 0vh;
+    border: #03DAC5 solid 2px;
+    background-color: #404040;
+}
+
+
+
+
+span.highlight{
+    font-family: Calibri;
+    color: #FF0022;
+}
+
+h1, h2, h3{
+    color: #BB86FC;
 }
 
 a:link{
@@ -59,9 +84,8 @@ a:visited{
     color: #FF0266;
 }
 
-ul, ol {
-    padding-left: 3.703vh;
-}
+
+
 
 new-numeric{
     font-family: Monospace monospace;

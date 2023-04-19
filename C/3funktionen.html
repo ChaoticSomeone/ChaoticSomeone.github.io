@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../../stylesheet.css" />
+    <meta charset="UTF-8">
+    <title>SEW Helper</title>
+</head>
+<body>
+    <a href="../../index.html">Zurück zur Startseite</a>
+
+    <p>Hinweis: Code der fett in <b style="font-family: Monospace; color: #03DAC5">Farbe</b> geschrieben ist, darf nicht wörtlich übernommenen werden! <br></p>
+
+    <h2>Funktionen & Unterprogramme</h2>
+    <p>Der wesentliche Unterschied zwischen Unterprogrammen und Funktion ist, dass Funktionen einen Wert zurückschicken können und Unterprogramme nicht.
+        Beide werden verwendet, wenn dieselbe Anweisung mehrmals benötigt wird, um die Lesbarkeit zu erhalten.
+        Von weder einer Funktion noch einem Unterprogramm lässt sich auf Variablen zugreifen, die in der Main-Funktion definiert wurden,
+        dafür sind Parameter oder sog. Globale Variablen notwendig (wobei Letzteres nicht empfohlen ist).
+    </p><p>
+        Es ist empfehlenswert komplexere Algorithmen bzw. Abläufe in einzelne Funktionen/Unterprogramme zu gliedern.
+    </p>
+
+    <h2>Unterprogramme</h2>
+    <p>Ein Unterprogramm schickt keine Werte zurück, sondern führt nur eine Reihe von Anweisungen aus. Einem Unterprogramm
+    kann man sog. Parameter angeben. Diese sind Werte, die die Funktion evtl. für ihre Verarbeitung benötigen könnte.
+    </p>
+    <div class="code">
+        <code>
+            <key-word>void</key-word> <non-literal>Unterprogrammname</non-literal> (<non-literal>Datentyp Parametername, ...</non-literal>) {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            }
+        </code>
+    </div>
+    <p>Zu beachten ist das void-Schlüsselwort, es gibt an das es sich hierbei um ein Unterprogramm handelt (Obwohl unter speziellen Umständen void auch ein 'Datentyp' ist, dies ist aber nicht relevant).
+    Obwohl Unterprogramme keinen Wert zurückschicken, kann das return-Schlüsselwort genutzt werden, um das Unterprogramm frühzeitig zu beenden, dies erfolgt auf diese Weise:
+    </p>
+    <div class="code">
+        <code>
+            <key-word>void</key-word> <non-literal>Unterprogrammname</non-literal> (<non-literal>Datentyp Parametername, ...</non-literal>) {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            <key-word class="tab1">return</key-word>;<br>
+            }
+        </code>
+    </div>
+
+    <h2>Funktionen</h2>
+    <p>Im Gegensatz zu Unterprogrammen können Funktionen auch einen Wert zurückschicken. Auch Funktionen können Parameter haben.</p>
+    <div class="code">
+        <code>
+            <non-literal>Datentyp Funktionsname</non-literal> (<non-literal>Datentyp Parametername, ...</non-literal>) {<br>
+            <non-literal class="tab1">...</non-literal><br>
+            <key-word class="tab1">return</key-word> <non-literal>...</non-literal>;<br>
+            }
+        </code>
+    </div>
+
+    <h2>Header-Dateien (Code Module)</h2>
+    <p>Eine Header-Datei (.h, nicht .hpp) wird verwendet um Funktionen bzw. Unterprogramme aus einer anderen C-Datei einzubinden.
+        Bei Modulen erfolgt die Definition der Funktion/des Unterprogramms in einer seperaten C-Datei, während der Funktionsprototyp
+        sich in der Header-Datei befindet. Geht man nicht von einem Modul aus, kann man auch die Definition selbst im Header verfassen.
+        Der Aufbau lässt sich anhand folgendem Beispiel erkennen:
+    </p>
+    <p>Code in 'mymodule.h':</p>
+    <div class="code">
+        <code>
+            <pre-processor>#ifndef</pre-processor> <new-macro>MYMODULE_H</new-macro><br>
+            <pre-processor>#define</pre-processor> <new-macro>MYMODULE_H</new-macro><br>
+            <key-word>void</key-word> func ();<br>
+            <pre-processor>#endif</pre-processor>
+        </code>
+    </div>
+    <p>Code in 'mymodule.c':</p>
+    <div class="code">
+        <code>
+            <pre-processor>#include</pre-processor> <new-string>&ltstdio.h&gt</new-string><br>
+            <pre-processor>#include</pre-processor> <new-string> "mymodule.h"</new-string><br>
+            <key-word>void</key-word> func () {<br>
+            <span class="tab1">printf(<new-string>"Hello World\n"</new-string>);</span><br>
+            }
+        </code>
+    </div>
+    <p>Code in 'main.c':</p>
+    <div class="code">
+        <code>
+            <pre-processor>#include "mymodule.h"</pre-processor><br>
+            <key-word>int</key-word> main () {<br>
+            <span class="tab1">func();</span><br>
+            }<br>
+            <key-word>return</key-word> <new-numeric>0</new-numeric>;
+        </code>
+    </div>
+</body>
+</html>
