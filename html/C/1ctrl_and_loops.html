@@ -136,6 +136,92 @@
     <ul>
         <li>break:<br><span class="tab1"></span>Führt zum sofortigen Beenden einer Schleife.</li>
     </ul>
+    <br><br>
+
+
+    <h2>Übungen</h2>
+    <!--    Naming of IDs: <chapterNo.>s<index><letter to represent No. of practice>   -->
+    <p>Füllen Sie die Lücken aus, um ein ausführbares Programm zu erzeugen:</p>
+    <div class="code">
+        <code>
+            <pre-processor><input class="slot" id="1s1a" maxlength="1" style="width: 1vw">include</pre-processor> <new-string>&ltstdio.h&gt</new-string><br><br>
+            <key-word>int</key-word> main () {<br>
+            <key-word>int</key-word> i = <new-numeric>0</new-numeric>;<br>
+            <key-word class="tab1"><input class="slot" id="1s2a" maxlength="2" style="width: 2vw"></key-word> {<br>
+            <span class="tab2"></span>printf(<new-string>"Hello World\n"</new-string>);<br>
+            <span class="tab2"></span>i = i + <new-numeric>1</new-numeric><br>
+            <span class="tab1"></span>} while (i < <new-numeric>10</new-numeric>)<input class="slot" id="1s3a" maxlength="1" style="width: 1vw"><br>
+            }<br><br>
+        </code>
+        <input type="button" class="check" id="1submit1" value="Überprüfen" onclick="getInput1()"><br>
+        <p id="feedback1"></p>
+        <script type="text/javascript" src="../../JS/funcs.js"></script>
+        <script type="text/javascript">
+            var utils = new UtilFuncs();
+            var classInstances = document.querySelectorAll(".slot");
+            var ids = Array.prototype.map.call(classInstances, function(element) {
+                if (element.id.includes("a")){
+                    return element.id;
+                }
+            });
+            var values = [];
+            function getInput1(){
+                ids.forEach(function (val){
+                    values.push(document.getElementById(val).value);
+                });
+            }
+            function main(){
+                document.getElementById("1submit1").addEventListener("click", function (){
+                    const correctAnswers = ["#", "do", ";"];
+                    var equality = Math.round((utils.compareArrays(values, correctAnswers) + Number.EPSILON) * 100) / 100;
+                    document.getElementById("feedback1").innerText = `${equality}% der Aufgabe wurde richtig gelöst!`;
+                    values = []
+                });
+            }
+            window.onload = main;
+        </script>
+    </div>
+    <br><br>
+    <p>Vervollständigen Sie das Programm, sodass der Text "C ist super" 4-mal ausgegeben wird:</p>
+    <div class="code">
+        <code>
+            <pre-processor>#include</pre-processor> <new-string>&ltstdio.h&gt</new-string><br>
+            <key-word>int</key-word> main () {<br>
+            <key-word class="tab1">for</key-word> (<key-word>int</key-word> i = <new-numeric>0</new-numeric>; <input class="slot" id="1s1b" maxlength="6" style="width: 4vw"> i+<input class="slot" id="1s2b" maxlength="1" style="width: 1vw">) {<br>
+            <span class="tab2"></span>printf(<new-string>"C ist super\n"</new-string>);<br>
+            <span class="tab1"></span>}<br>
+            }<br>
+        </code>
+        <input type="button" class="check" id="1submit2" value="Überprüfen" onclick="getInput2()"><br>
+        <p id="feedback2"></p>
+        <script type="text/javascript">
+            var utils = new UtilFuncs();
+            var classInstances = document.querySelectorAll(".slot");
+            var ids = Array.prototype.map.call(classInstances, function(element) {
+                if (element.id.includes("b")){
+                    return element.id;
+                }
+            });
+            ids = ids.filter(function(element){
+                return element !== undefined;
+            });
+            var values = [];
+            function getInput2(){
+                ids.forEach(function (val){
+                    values.push(document.getElementById(val).value.replaceAll(" ", ""));
+                });
+            }
+            function main(){
+                document.getElementById("1submit2").addEventListener("click", function (){
+                    const correctAnswers = ["i<4;", "+"];
+                    var equality = Math.round((utils.compareArrays(values, correctAnswers) + Number.EPSILON) * 100) / 100;
+                    document.getElementById("feedback2").innerText = `${equality}% der Aufgabe wurde richtig gelöst!`;
+                    values = []
+                });
+            }
+            window.onload = main;
+        </script>
+    </div>
 
     
     
