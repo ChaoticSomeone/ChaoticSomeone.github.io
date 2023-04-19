@@ -8,3 +8,4 @@ Beschwerden über den Source Code sind nicht erwünscht!
 - Schleifen
 - Operatoren
 - Funktionen & Unterprogramme
+- Arrays
