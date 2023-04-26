@@ -159,26 +159,26 @@
         <script type="text/javascript">
             var utils = new UtilFuncs();
             var classInstances = document.querySelectorAll(".slot");
-            var ids = Array.prototype.map.call(classInstances, function(element) {
+            var ids1 = Array.prototype.map.call(classInstances, function(element) {
                 if (element.id.includes("a")){
                     return element.id;
                 }
             });
-            var values = [];
+            var values1 = [];
             function getInput1(){
-                ids.forEach(function (val){
-                    values.push(document.getElementById(val).value);
+                ids1.forEach(function (val){
+                    values1.push(document.getElementById(val).value);
                 });
             }
-            function main(){
+            function compareResult1(){
                 document.getElementById("1submit1").addEventListener("click", function (){
-                    const correctAnswers = ["#", "do", ";"];
-                    var equality = Math.round((utils.compareArrays(values, correctAnswers) + Number.EPSILON) * 100) / 100;
-                    document.getElementById("feedback1").innerText = `${equality}% der Aufgabe wurde richtig gelöst!`;
-                    values = []
+                    const correctAnswers1 = ["#", "do", ";"];
+                    var equality1 = Math.round((utils.compareArrays(values1, correctAnswers1) + Number.EPSILON) * 100) / 100;
+                    document.getElementById("feedback1").innerText = `${equality1}% der Aufgabe wurde richtig gelöst!`;
+                    values1 = []
                 });
             }
-            window.onload = main;
+            window.addEventListener("load", compareResult1);
         </script>
     </div>
     <br><br>
@@ -190,36 +190,36 @@
             <key-word class="tab1">for</key-word> (<key-word>int</key-word> i = <new-numeric>0</new-numeric>; <input class="slot" id="1s1b" maxlength="6" style="width: 4vw"> i+<input class="slot" id="1s2b" maxlength="1" style="width: 1vw">) {<br>
             <span class="tab2"></span>printf(<new-string>"C ist super\n"</new-string>);<br>
             <span class="tab1"></span>}<br>
-            }<br>
+            }<br><br>
         </code>
         <input type="button" class="check" id="1submit2" value="Überprüfen" onclick="getInput2()"><br>
         <p id="feedback2"></p>
         <script type="text/javascript">
             var utils = new UtilFuncs();
             var classInstances = document.querySelectorAll(".slot");
-            var ids = Array.prototype.map.call(classInstances, function(element) {
+            var ids2 = Array.prototype.map.call(classInstances, function(element) {
                 if (element.id.includes("b")){
                     return element.id;
                 }
             });
-            ids = ids.filter(function(element){
+            ids2 = ids2.filter(function(element){
                 return element !== undefined;
             });
-            var values = [];
+            var values2 = [];
             function getInput2(){
-                ids.forEach(function (val){
-                    values.push(document.getElementById(val).value.replaceAll(" ", ""));
+                ids2.forEach(function (val){
+                    values2.push(document.getElementById(val).value.replaceAll(" ", ""));
                 });
             }
-            function main(){
+            function compareResult2(){
                 document.getElementById("1submit2").addEventListener("click", function (){
-                    const correctAnswers = ["i<4;", "+"];
-                    var equality = Math.round((utils.compareArrays(values, correctAnswers) + Number.EPSILON) * 100) / 100;
-                    document.getElementById("feedback2").innerText = `${equality}% der Aufgabe wurde richtig gelöst!`;
-                    values = []
+                    const correctAnswers2 = ["i<4;", "+"];
+                    var equality2 = Math.round((utils.compareArrays(values2, correctAnswers2) + Number.EPSILON) * 100) / 100;
+                    document.getElementById("feedback2").innerText = `${equality2}% der Aufgabe wurde richtig gelöst!`;
+                    values2 = []
                 });
             }
-            window.onload = main;
+            window.addEventListener("load", compareResult2);
         </script>
     </div>
 

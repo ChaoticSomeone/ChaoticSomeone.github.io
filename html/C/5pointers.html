@@ -13,7 +13,7 @@
 	<h2>Pointer</h2>
 
 	<h3>Was ist ein Pointer?</h3>
-	<p>Pointer sind eine spezielle Art von Variable, die besonderen Eigenschaften von Pointer sind:</p>
+	<p>Pointer sind eine spezielle Abwandlung eines Datentyps und sind somit nur schwer mit Variablen vergleichbar. Besondere Eigenschaften von Pointern sind:</p>
 	<ul>
 		<li>Unabhängig vom Datentyp brauchen Pointer immer 8 Byte bzw. 64 Bits</li>
 		<li>Pointer können den 'Datentyp' void annehmen</li>
@@ -40,6 +40,19 @@
 			<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>; <new-comment>// Zuweisung einer Adresse</new-comment>
 		</code>
 	</div>
+	<p>Nun werden wir ein kurzes Beispiel durchbesprechen, um ein Verständnis für diese Grundlage zu schaffen:</p>
+	<div class="code">
+		<code>
+			<pre-processor>#include</pre-processor> <new-string>&ltstdio.h&gt</new-string><br>
+			<key-word>int</key-word> main () {<br>
+			<key-word class="tab1">int</key-word> zahl = <new-numeric>16</new-numeric>;<br>
+			<key-word class="tab1">int</key-word> *pointer = &amp;zahl;<br>
+			}
+		</code>
+	</div>
+	<p>Dieses Programm definiert einen Pointer, welcher die Adresse der Variable 'zahl' enthält und hat somit auch Zugriff auf diese Variable. Zu beachten ist, dass der Poiner und die Variable den
+	selben Datentyp haben müssen (außer der Poiner ist von Typ void, dazu kommen wird aber noch später).</p>
+
 	<p>Diese 2 Wege, um einen Pointer zu initialisieren, sind die einzigen beiden (simplen) Schreibweisen die verwendet werden sollten. Eine weitere Schreibweise wird zu einem späteren Zeitpunkt erklärt.
 	 Aber wer wirklich eine Vorliebe für Segmentation Faults (Speicherverletzungen, Exit Code: 0xC0000005) hat, kann Pointer manuell mit Adressen initialiseiren:
 	</p>
@@ -54,7 +67,8 @@
 	<div class="code">
 		<code>
 			<non-literal>Datentyp</non-literal> *<non-literal>Pointername</non-literal> = &<non-literal>Variablenname</non-literal>;<br>
-			*<non-literal>Pointername</non-literal> = <non-literal>Wert</non-literal>;
+			*<non-literal>Pointername</non-literal> = <non-literal>Wert</non-literal>;<br>
+			printf(<new-string>"%</new-string><non-literal>Formatangabe</non-literal><new-string>"</new-string>, *<non-literal>Pointername</non-literal>); <new-comment>// Gibt den Wert an der gespeicherten Adresse aus</new-comment>
 		</code>
 	</div>
 
@@ -68,7 +82,20 @@
 	</div>
 
 	<h2>Beispiele #1</h2>
-	<p></p>
+	<p>Im folgenden Beispiel wird der Wert einer Variable durch einen Pointer geändert:</p>
+	<div class="code">
+		<code>
+			<pre-processor>#include</pre-processor> <new-string>&ltstdio.h&gt</new-string><br>
+			<key-word>int</key-word> main () {<br>
+			<key-word class="tab1">int</key-word> zahl = <new-numeric>4</new-numeric>;<br>
+			<key-word class="tab1">int</key-word> *pointer = <new-macro>NULL</new-macro>;<br>
+			<span class="tab1"></span>pointer = &amp;zahl;<br>
+			<span class="tab1"></span>printf(<new-string>"%d\n"</new-string>, zahl); <new-comment>// Gibt '4' aus</new-comment><br>
+			<span class="tab1"></span>*pointer = <new-numeric>10</new-numeric>;<br>
+			<span class="tab1"></span>printf(<new-string>"%d\n"</new-string>, zahl); <new-comment>// Gibt '10' aus</new-comment><br>
+			}
+		</code>
+	</div>
 
 </body>
 </html>
